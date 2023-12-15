@@ -9,3 +9,4 @@
 - `python manage.py runserver`
 
 # Project Details
+![Home Page](/ProjectScreenShots/HomePage.png)
