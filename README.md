@@ -20,6 +20,7 @@
 ![Book details Page](/ProjectScreenShots/DetailsOfPerticularBook.png)
 
 ## Add Books form
+![Book details Page](/ProjectScreenShots/AddBookForm.png)
 
 ## List of all members
 ![List Of all members Page](/ProjectScreenShots/ListOfMembers.png)
