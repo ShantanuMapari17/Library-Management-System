@@ -1,0 +1,18 @@
+{% extends 'library/index.html' %}
+
+{% block content %}
+    <div class="container ">
+        <div class="card mx-auto mt-4" style="width: 25rem;">
+            <div class="card-body">
+                <h2 class="card-title text-center"><b>Confirm Deleting Member</b></h2>
+                <p class="card-text"><b>First Name:</b> {{member.first_name}}</p>
+                <p class="card-text"><b>Last Name:</b> {{member.last_name}}</p>
+                <p class="card-text"><b>Email:</b> {{member.email}}</p>
+                <p class="card-text"><b>Debt:</b> {{member.debt}}</p>
+                
+                <a href="{% url 'confirm_delete_member' member.id %}" class="btn btn-success btn-block">Confirm</a>
+                <a href="{% url 'index' %}" class="btn btn-success btn-block">Home</a>
+            </div>
+        </div>
+    </div>
+{% endblock content %}

@@ -1,0 +1,40 @@
+{% extends 'library/index.html' %}
+{%block content%}
+
+<div class="container">
+    <div class="row justify-content-center mt-4">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <h2 class="card-title text-center mb-4">Add Books</h2>
+                    <form action="{% url 'add_books' %}" method="post">
+                        {% csrf_token %}
+                        {% for field in form %}
+                            <div class="mb-3 row">
+                                <label for="{{ field.id_for_label }}" class="col-sm-4 col-form-label fw-bold">{{ field.label }}</label>
+                                <div class="col-sm-8">
+                                    {{ field }}
+                                </div>
+                            </div>
+                        {% endfor %}
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<!-- <form action="{% url 'add_books' %}" method="post">
+    {% csrf_token %}
+    {% for field in form %}
+        <div>
+            {{field.label}} {{field}}
+        </div>
+    {% endfor %}
+    <input type="submit">
+</form> -->
+{% endblock content %}

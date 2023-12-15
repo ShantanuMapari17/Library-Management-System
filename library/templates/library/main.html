@@ -1,0 +1,35 @@
+{% extends 'library/index.html' %}
+
+{% block content %}
+<div class="container myclass text-center" style="background-color: #f8f9fa; padding: 20px; border-radius: 10px;">
+    <div class="row justify-content-md-center mb-4">
+        <div class="col-lg-6">
+            <a href="{% url 'books_home' %}" class="btn btn-primary btn-lg btn-block" role="button" aria-disabled="true">Browse Books</a>
+        </div>
+    </div>
+
+    <div class="row justify-content-md-center mb-4">
+        <div class="col-lg-6">
+            <a href="{% url 'members_home' %}" class="btn btn-primary btn-lg btn-block" role="button" aria-disabled="true">Explore Members</a>
+        </div>
+    </div>
+
+    <div class="row justify-content-md-center mb-4">
+        <div class="col-lg-6">
+            <a href="{% url 'issue_book' %}" class="btn btn-primary btn-lg btn-block" role="button" aria-disabled="true">Issue a Book</a>
+        </div>
+    </div>
+
+    <div class="row justify-content-md-center mb-4">
+        <div class="col-lg-6">
+            <a href="{% url 'return_book' %}" class="btn btn-primary btn-lg btn-block" role="button" aria-disabled="true">Return a Book</a>
+        </div>
+    </div>
+
+    <div class="row justify-content-md-center">
+        <div class="col-lg-6">
+            <a href="{% url 'clear_debt' %}" class="btn btn-primary btn-lg btn-block" role="button" aria-disabled="true">Clear Debt</a>
+        </div>
+    </div>
+</div>
+{% endblock content %}

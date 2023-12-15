@@ -1,0 +1,55 @@
+{% extends 'library/index.html' %}
+
+{% block content %}
+<div class="container">
+    <h2><a href="{% url 'add_books' %}">Add Books</a></h2>
+</div>
+<div class="container">
+  <table class="table table-bordered table-striped mt-4">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Title</th>
+        <th scope="col">Quantity</th>
+        <th scope="col" >Delete</th>
+      </tr>
+    </thead>
+    <tbody>
+        {% for book in books %}
+        <tr>
+            <th scope="row"><a href="{% url 'show_book_detail' book.id%}">{{book.id}}</a></th>
+            <td scope="row"><a href="{% url 'show_book_detail' book.id%}">{{book.title}}</a></td>
+            <td scope="row"><a href="{% url 'show_book_detail' book.id%}">{{book.quantity}}</a></td>
+            <!-- <td><a href="{% url 'show_book_detail' book.id%}"></a>{{book.title}}</a></td>
+            <td><a href="{% url 'show_book_detail' book.id%}"></a>{{book.quantity}}</a></td> -->
+            <td><a href="{% url 'delete_book' book.id%}">Delete</a></td>
+          </tr>
+        {% endfor %}
+      
+      
+    </tbody>
+  </table>
+</div>
+{% endblock content %}
+
+
+<!-- {% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Books</title>
+</head>
+<body>
+    <h1>Books</h1>
+    <h2><a href="{% url 'add_books'%}">Add Books</a></h2>
+
+    <h3>Showing all available books</h3>
+    <ol>
+        {% for book in books %}
+         <li>{{book.title}}  quantity -> {{book.quantity}}</li>
+        {% endfor %}
+    </ol>
+</body>
+</html> -->

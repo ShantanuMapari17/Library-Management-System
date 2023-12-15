@@ -1,0 +1,18 @@
+{% extends 'library/index.html' %}
+
+{% block content %}
+<div class="container">
+    <div class="card mx-auto mt-4" style="width: 30rem;">
+        <div class="card-body">
+            <h2 class="card-title text-center">Confirm Deleting Book</h2>
+            <p class="card-text"><b>Book Title:</b> {{book.title}}</p>
+            <p class="card-text"><b>Authors:</b> {{book.authors}}</p>
+            <p class="card-text"><b>ISBN:</b> {{book.isbn}}</p>
+            <p class="card-text"><b>Quantity:</b> {{book.quantity}}</p>
+
+            <a href="{% url 'confirm_delete_book' book.id %}" class="btn btn-success btn-block">Confirm</a>
+            <a href="{% url 'index'  %}" class="btn btn-success btn-block">Home</a>
+        </div>
+    </div>
+</div>
+{% endblock content %}

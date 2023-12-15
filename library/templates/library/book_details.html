@@ -1,0 +1,54 @@
+{% extends 'library/index.html' %}
+
+{% block content %}
+<div class="container">
+    <div class="row justify-content-center mt-4">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <h2 class="card-title text-center mb-4">Book Details</h2>
+                    <div class="mb-3">
+                        <p class="fw-bold"><strong>Title</strong>: {{ book.title }}</p>
+                        <p class="fw-bold"><b>Author</b>: {{ book.authors }}</p>
+                        <p class="fw-bold"><b>ISBN</b>: {{ book.isbn }}</p>
+                        <p class="fw-bold"><b>Publisher</b>: {{ book.publisher }}</p>
+                        <p class="fw-bold"><b>Quantity Left</b>: {{ book.quantity }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row justify-content-center mt-4">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <h2 class="card-title text-center mb-4">Members Who Issued This Book</h2>
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Member Name</th>
+                                    <th scope="col">Issue Date</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for transaction in transactions %}
+                                    <tr>
+                                        <td>{{ forloop.counter }}</td>
+                                        <td class="fw-bold">{{ transaction.member.first_name }} {{ transaction.member.last_name }}</td>
+                                        <td>{{ transaction.issue_date }}</td>
+                                    </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock content %}

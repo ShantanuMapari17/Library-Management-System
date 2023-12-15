@@ -1,0 +1,27 @@
+{% extends 'library/index.html' %}
+{% block content %}
+<div class="container">
+    <div class="row justify-content-center mt-4">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <h2 class="card-title text-center mb-4">Clear Debt</h2>
+                    <form action="{% url 'clear_debt' %}" method="post">
+                        {% csrf_token %}
+                        <div class="mb-3">
+                            <label for="mem_id" class="form-label">Select Member</label>
+                            <select class="form-select" id="mem_id" aria-label="Default select example" name="mem_id">
+                                {% for member in members %}        
+                                    <option value="{{member.id}}">{{member.first_name}} {{member.last_name}}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button> 
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}
