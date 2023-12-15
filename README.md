@@ -9,4 +9,29 @@
 - `python manage.py runserver`
 
 # Project Details
+## Home Page
 ![Home Page](/ProjectScreenShots/HomePage.png)
+
+
+## List of all available books
+![Books Page](/ProjectScreenShots/ListOfAllBooks.png)
+
+## Details of perticular book
+![Book details Page](/ProjectScreenShots/DetailsOfPerticularBook.png)
+
+## Add Books form
+
+## List of all members
+![List Of all members Page](/ProjectScreenShots/ListOfAllMembers.png)
+
+## Details of perticular member
+![Details of perticular member Page](/ProjectScreenShots/DetailsOfMember.png)
+
+## Issue book
+![Issue Book Page](/ProjectScreenShots/IssueBook.png)
+
+## Return Book
+![Return Book Page](/ProjectScreenShots/ReturnBook.png)
+
+## Clear Debt of User
+![Clear debt of User Page](/ProjectScreenShots/ClearDebt.png)
