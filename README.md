@@ -22,7 +22,7 @@
 ## Add Books form
 
 ## List of all members
-![List Of all members Page](/ProjectScreenShots/ListOfAllMembers.png)
+![List Of all members Page](/ProjectScreenShots/ListOfMembers.png)
 
 ## Details of perticular member
 ![Details of perticular member Page](/ProjectScreenShots/DetailsOfMember.png)
