@@ -9,7 +9,8 @@
 - `python manage.py runserver`
 
 ## Can also run with the help of docker
-- docker compose up
+- docker-compose up
+  
 - docker image link
 - `shantanumapari17/library_app`
 
